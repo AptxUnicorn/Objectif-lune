@@ -10,7 +10,7 @@ body {
 }
 
 main {
-    height: 90%;
+    height: 80%;
 }
 
 /* Menu de navigation */
@@ -56,6 +56,12 @@ a {
     align-items: center;
     background-color: #04052e;
     transition: 0.5s;
+}
+
+/* footer */
+
+footer{
+    height: 10%;
 }
 
 /* animation Fusée */
