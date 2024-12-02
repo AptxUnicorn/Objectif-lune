@@ -1,0 +1,94 @@
+/* Styles commun à toutes les pages */
+
+body {
+    margin: 0px;
+    width: 100vw;
+    height: 100vh;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #04052e;
+}
+
+main {
+    height: 80%;
+}
+
+footer {
+    width: 100%;
+    height: 10%;
+}
+
+/* Menu de navigation */
+
+header {
+    width: 100%;
+    height: 10%;
+}
+
+nav {
+    height: 100%;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    height: 100%;
+    justify-content:space-evenly;
+    margin: 0px;
+    padding: 0px;
+}
+
+li {
+    width: 25%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:#04052e;
+}
+
+footer ul li {
+    width: 50%;
+}
+
+li:hover {
+    background-color: #140152;
+}
+
+/* animation Fusée */
+
+
+/* animation lune */
+
+#moon {
+    position: absolute;
+    width: 20%;
+    height: auto;
+    margin-left: 10%;
+    margin-top: 10%;
+    animation: spin 50s linear infinite
+} 
+
+/* animation Terre */
+
+#earth {
+    position: absolute;
+    width: 10%;
+    height: auto;
+    margin-left: 65%;
+    margin-top: 5%;
+    animation: spin 200s linear infinite
+}
+
+/* animation Etoiles */
+
+.star {
+    height: auto;
+    animation: spin 1s linear infinite
+}
+
+
+
+@keyframes spin {
+    100% { transform: rotate(360deg); }
+}  
