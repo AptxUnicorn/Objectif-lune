@@ -10,12 +10,7 @@ body {
 }
 
 main {
-    height: 80%;
-}
-
-footer {
-    width: 100%;
-    height: 10%;
+    height: 90%;
 }
 
 /* Menu de navigation */
@@ -44,15 +39,21 @@ li {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color:#04052e;
 }
 
-footer ul li {
-    width: 50%;
-}
-
-li:hover {
+a:hover {
     background-color: #140152;
+}
+
+a {
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: #ABD2FA;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #04052e;
 }
 
 /* animation Fusée */
