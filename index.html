@@ -11,7 +11,7 @@
     <title>Objectif lune</title>
 </head>
 
-<!-- Le header se répète, les mains suivent un schéma spécifique sur la page d'accueil, et sont similaires sur les pages d'informations -->
+<!-- Le header et le footer se répète, les mains diffèrent et ont des sélécteurs id, et sont similaires sur les pages d'informations -->
 
 <body>
     <header>
@@ -26,11 +26,13 @@
     </header>
     <main id="accueil">
         <section>
-            <video muted autoplay loop>
+            <!-- Video qui se joue automatiquement, (mauvaise qualité mais seulement 0.3M de données. (compressée à l'aide de handbreaker)) -->
+            <video muted autoplay loop playsinline>
                 <source alt="video de la lune" src="src/videos/Neil Armstrong - First Moon Landing 1969(2).mp4">
             </video>
         </section>
         <section>
+            <!-- Titres page d'accueil -->
             <h1>Bienvenue sur Objectif Lune</h1>
             <h2>Ici vous en apprendrez plus sur l'histoire de la course à l'espace et de la conquête lunaire.</h2>
         </section>

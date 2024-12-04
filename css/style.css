@@ -73,13 +73,13 @@ nav ul li a {
     justify-content: center;
     align-items: center;
     background-color: white;
-    transition: 0.4s;
+    transition: 0.4s; /* transition donne le temps pour lequel le contenu dans le selecteur :hover met à s'appliquer */
 }
 
 nav ul li a:hover {
     background-color: black;
     color: white;
-}
+} /* ici on inverse les couleurs pour indiquer au passage de la souris que les boutons sont des boutons */
 
 /* footer / liens dans le footer */
 
@@ -110,11 +110,11 @@ footer ul li a {
 #github{
     width: 40%;
     height: auto;
-    transition: 0.4s;
+    transition: 0.4s; /* transition donne le temps pour lequel le contenu dans le selecteur :hover met à s'appliquer */
 }
 
 #github:hover{
-    transform: scale(1.5);
+    transform: scale(1.5); /* transform: scale() permet de modifier la taille de l'élément (en restant sur le même centre) */
 }
 
 .footext{
@@ -142,12 +142,14 @@ footer ul li a {
 #terre > img, #terre >section {
     width: 50vmax;
     height: 95%;
-    object-fit: cover;
+    object-fit: cover; /* object fit précise la façcon dont l'image remplie le conteneur (image étirée ou comblante)*/
 }
 
 #terre > section {
     width: 30vw;
 }
+
+/* media querry pour le responsive */
 
 @media (width <= 1000px) {
     #terre > img {
@@ -197,7 +199,7 @@ section > p {
 
 video {
     position: relative;
-    object-fit: cover;
+    object-fit: cover; /*object fit précise la facon dont l'élément doit remplir son conteneur (image étirée ou comblante) */
     width: 100%;
     height: 100%;
 }
