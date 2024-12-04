@@ -45,66 +45,66 @@ header {
 
 nav {
     height: 100%;
-}
 
-nav ul {
-    list-style-type: none;
-    display: flex;
-    height: 100%;
-    justify-content:space-evenly;
-    margin: 0;
-    padding: 0;
-}
+    ul {
+        list-style-type: none;
+        display: flex;
+        height: 100%;
+        justify-content:space-evenly;
+        margin: 0;
+        padding: 0;
 
-nav ul li {
-    width: 25%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+        li {
+            width: 25%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
 
-nav ul li a {
-    width: 100%;
-    height: 100%;
-    text-decoration: none;
-    color: black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: white;
-    transition: 0.4s; /* transition donne le temps pour lequel le contenu dans le selecteur :hover met à s'appliquer */
-}
+            a {
+                width: 100%;
+                height: 100%;
+                text-decoration: none;
+                color: black;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: white;
+                transition: 0.4s; /* transition donne le temps pour lequel le contenu dans le selecteur :hover met à s'appliquer inverse les couleurs pour indiquer au passage de la souris que les boutons sont des boutons */
+            }
 
-nav ul li a:hover {
-    background-color: black;
-    color: white;
-} /* ici on inverse les couleurs pour indiquer au passage de la souris que les boutons sont des boutons */
+            a:hover {
+                background-color: black;
+                color: white;
+            }
+        }
+    }
+    
+}
 
 /* footer / liens dans le footer */
 
 footer{
     height: 10%;
-}
+    ul {
+        list-style-type: none;
+        display: flex;
+        height: 100%;
+        justify-content: space-around;
+        margin: 0;
+        padding: 0;
 
-footer ul {
-    list-style-type: none;
-    display: flex;
-    height: 100%;
-    justify-content: space-around;
-    margin: 0;
-    padding: 0;
-}
+        li {
+            display: flex;
+            justify-content: center;
+            align-items: center;
 
-footer ul li {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-footer ul li a {
-    display: flex;
-    justify-content: center;
+            a {
+                display: flex;
+                justify-content: center;
+            }
+        }
+    }
 }
 
 #github{
@@ -126,7 +126,8 @@ footer ul li a {
 }
 
 .footext:hover{
-    transform: scale(1.5)
+    transform: scale(1.5);
+    font-weight: 900;
 }
 
 /* Styles de la page "terre" */
@@ -137,19 +138,18 @@ footer ul li a {
     justify-content: space-evenly;
     align-items: space-evenly;
     flex-flow: wrap-reverse;
+
+    > img , > section {
+        width: 50vmax;
+        height: 95%;
+        object-fit: cover;
+    }
+    section {
+        width: 30vw;
+    }
 }
 
-#terre > img, #terre >section {
-    width: 50vmax;
-    height: 95%;
-    object-fit: cover; /* object fit précise la façcon dont l'image remplie le conteneur (image étirée ou comblante)*/
-}
-
-#terre > section {
-    width: 30vw;
-}
-
-/* media querry pour le responsive */
+/* media query pour le responsive de la page du contexte */
 
 @media (width <= 1000px) {
     #terre > img {
@@ -177,6 +177,25 @@ section > p {
     justify-content: space-evenly;
     align-items: space-evenly;
 
+    section {
+        width: 20%;
+        height: 45%;
+    
+        h2 {
+            font-size: medium;
+            font-weight: 900;
+            margin: 0;
+        }
+    
+        h3 {
+            font-size: medium;
+            margin: 0;
+        }
+    
+        p {
+            font-size: small;
+        }
+    }
 }
 
 /* Styles de la page d'accueil */
@@ -186,15 +205,15 @@ section > p {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
 
-#accueil section {
-    height: 60%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    section {
+        height: 60%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 }
 
 video {
@@ -202,4 +221,32 @@ video {
     object-fit: cover; /*object fit précise la facon dont l'élément doit remplir son conteneur (image étirée ou comblante) */
     width: 100%;
     height: 100%;
+}
+
+/* styles de la page de contact */
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+}
+
+input {
+    width: 100%;
+    padding: 0;
+}
+
+button {
+    width: 100%;
+    border: none;
+    padding: 0;
+}
+
+#text {
+    height: 100px;
+
+    input {
+        height: 80%;
+    }
 }
