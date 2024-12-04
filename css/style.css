@@ -1,13 +1,18 @@
+
 /* Styles commun à toutes les pages */
+
+/* import de police */
 
 @font-face {
     font-family: Parkinsans;
     src: url("/src/fonts/Parkinsans-regular.ttf");
 }
 
+/* body/main/textes */
+
 body {
     font-size: 1em;
-    margin: 0px;
+    margin: 0;
     width: 100vw;
     height: 100vh;
     color: black;
@@ -19,7 +24,17 @@ main {
     height: 80%;
 }
 
-/* Menu de navigation */
+h1 {
+    font-size: xx-large;
+    font-weight: 600;
+}
+
+h2 {
+    font-size: x-large;
+    font-weight: 300;
+}
+
+/* Menu de navigation / header */
 
 header {
     width: 100%;
@@ -37,8 +52,8 @@ nav ul {
     display: flex;
     height: 100%;
     justify-content:space-evenly;
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
 }
 
 nav ul li {
@@ -47,11 +62,6 @@ nav ul li {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-nav ul li a:hover {
-    background-color: black;
-    color: white;
 }
 
 nav ul li a {
@@ -66,7 +76,12 @@ nav ul li a {
     transition: 0.4s;
 }
 
-/* footer */
+nav ul li a:hover {
+    background-color: black;
+    color: white;
+}
+
+/* footer / liens dans le footer */
 
 footer{
     height: 10%;
@@ -77,8 +92,8 @@ footer ul {
     display: flex;
     height: 100%;
     justify-content: space-around;
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
 }
 
 footer ul li {
@@ -102,7 +117,7 @@ footer ul li a {
     transform: scale(1.5);
 }
 
-#wikipedia{
+.footext{
     text-decoration: none;
     color: black;
     width: 40%;
@@ -110,7 +125,7 @@ footer ul li a {
     transition: 0.4s
 }
 
-#wikipedia:hover{
+.footext:hover{
     transform: scale(1.5)
 }
 
@@ -134,21 +149,12 @@ footer ul li a {
     width: 30vw;
 }
 
-h1 {
-    font-size: xx-large;
-    font-weight: 600;
-}
-
-h2 {
-    font-size: x-large;
-    font-weight: 300;
-}
-
-@media (max-width: 1000px) {
+@media (width <= 1000px) {
     #terre > img {
         width: 90vw;
         height: 40vh;
     }
+
     #terre > section {
         width: 90vw;
         height: 40vh;
@@ -158,7 +164,7 @@ h2 {
 section > p {
     padding-left: 2px;
     padding-top: 2px;
-    margin: 0px;
+    margin: 0;
 }
 
 /* Style de la page des missions */
@@ -171,7 +177,7 @@ section > p {
 
 }
 
-/* Styles de la page d'accueil*/
+/* Styles de la page d'accueil */
 
 #accueil  {
     display: flex;
