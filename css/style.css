@@ -10,7 +10,7 @@
 body {
     font-size: 1em;
     margin: 0;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     color: black;
     font-family: Parkinsans, Arial, Helvetica, sans-serif;
@@ -176,7 +176,6 @@ section > p {
 /* Style de la page des missions */
 
 #missions {
-    width: 100%;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -225,6 +224,23 @@ section > p {
 
     #missions > img {
         min-width: 90%;
+    }
+}
+
+/* Style de la page sur apollo 11 */
+
+#apollo {
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-flow: wrap column;
+
+    img, section {
+        width: 45%;
+        height: 45%;
+        object-fit: contain;
+        text-align: center;
     }
 }
 
