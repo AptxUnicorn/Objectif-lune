@@ -92,7 +92,7 @@ footer{
         padding: 0;
 
         li {
-            width: 33%; /* Pour éviter que le grossissement au survol ne déforme le footer*/
+            width: 30%; /* Pour éviter que le grossissement au survol ne déforme le footer*/
             display: flex;
             justify-content: center;
             align-items: center;
@@ -150,6 +150,12 @@ footer{
 /* media query pour le responsive de la page du contexte */
 
 @media (width <= 1000px) {
+
+    #terre {
+        height: auto;
+        text-align: center;
+    }
+
     #terre > img {
         width: 90vw;
         height: 40vh;
@@ -157,7 +163,7 @@ footer{
 
     #terre > section {
         width: 90vw;
-        height: 40vh;
+        height: fit-content;
     }
 }
 
@@ -200,6 +206,25 @@ section > p {
         p {
             font-size: small;
         }
+    }
+}
+/* media query pour le responsive de la page des missions */
+
+@media (width <= 1000px) {
+
+    #missions {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        min-height: fit-content;
+    }
+
+    #missions > section {
+        width: 80%;
+        text-align: center;
+    }
+
+    #missions > img {
+        min-width: 90%;
     }
 }
 
