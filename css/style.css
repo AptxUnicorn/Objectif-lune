@@ -207,7 +207,7 @@ section > p {
         }
     }
 }
-/* media query pour le responsive de la page des missions */
+/* media query pour le responsive de la page des missions (on aurait pus optimiser les médias query et les mettre ensemble pour chaque page mais je trouvais plus simple de les mettre avec les styles de leurs pages respectives) */
 
 @media (width <= 1000px) {
 
@@ -274,7 +274,7 @@ video {
 form {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-evenly;
     height: 100%;
 }
 
