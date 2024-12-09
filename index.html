@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <link rel="icon" type="image/svg" href="src/images/favicon.svg">
-    <link rel="icon" type="image/ico" href="src/images/favicon.ico">
+    <link rel="icon" type="image/svg" href="./src/images/favicon.svg">
+    <link rel="icon" type="image/ico" href="./src/images/favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="./css/style.css?v=1.0.1"> <!-- Forcer le navigateur à actualiser le css pour éviter la mise en cache lors du developpement ?v=1.0.1 -->
     <meta lang="fr">
     <meta name="description" content="Page d'accueil site Objectif Lune, site concept, dynamique. Design et conceptuel, ce site est un projet de première année de But MMI">
     <title>Objectif lune</title>
@@ -27,7 +27,7 @@
     <main id="accueil">
         <!-- Video qui se joue automatiquement, (mauvaise qualité mais seulement 0.3M de données. (compressée à l'aide de handbreaker)) -->
         <video muted autoplay loop playsinline> <!-- la balise video à plusieurs attributs : muted (la video ne donne pas de son) autoplay (elle se lance directement) loop (elle fait une boucle) displaysinline (elle ne se met pas en plein écran sur téléphone) -->
-            <source alt="video de la lune" src="src/videos/Neil Armstrong - First Moon Landing 1969(2).mp4">
+            <source alt="video de la lune" src="./src/videos/Neil Armstrong - First Moon Landing 1969(2).mp4">
         </video>
         <!-- Titres page d'accueil -->
         <h1>Bienvenue sur Objectif Lune</h1>
@@ -36,8 +36,8 @@
     <footer>
         <ul>
             <li><a href="https://fr.wikipedia.org/wiki/Course_%C3%A0_l%27espace" alt="lien vers la page wikipedia de la course à l'espace" class="footext">Wikipédia</a></li>
-            <li><a href="form.html" alt="lien vers une page d'avis" class="footext">Contact</a></li>
-            <li><a href="https://github.com/AptxUnicorn/Objectif-lune"><img src="src/images/github-mark.svg" alt="logo github" id="github"></a></li>
+            <li><a href="./php/form.php" alt="lien vers une page d'avis" class="footext">Contact</a></li>
+            <li><a href="https://github.com/AptxUnicorn/Objectif-lune"><img src="./src/images/github-mark.svg" alt="logo github" id="github"></a></li>
         </ul>
     </footer>
 </body>

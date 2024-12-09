@@ -2,7 +2,7 @@
 
 @font-face {
     font-family: Parkinsans;
-    src: url("/src/fonts/Parkinsans-regular.ttf");
+    src: url('../src/fonts/Parkinsans-Regular.ttf');
 }
 
 /* body/main/textes */
