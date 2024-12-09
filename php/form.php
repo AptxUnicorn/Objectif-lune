@@ -6,7 +6,7 @@
     <link rel="icon" type="image/svg" href="src/images/favicon.svg">
     <link rel="icon" type="image/ico" href="src/images/favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/style.css?v=1.0.1">
     <meta lang="fr">
     <meta name="description" content="Page de formulaire site Objectif Lune, site concept, dynamique. Design et conceptuel, ce site est un projet de première année de But MMI">
     <title>Objectif lune</title>
@@ -27,11 +27,27 @@
     </header>
     <main id="accueil">
         <h1>Un avis sur objectif lune ?</h1>
-        <form method="post" action="form.php">
-            <h2>Votre mail</h2><input type="email" name="email">
-            <h2>Votre avis/suggestion</h2><textarea rows="5" cols="100"> </textarea>
+        <form method="post" action="form.php" method="POST">
+            <h2>Votre mail</h2> <input type="email" name="email">
+            <ul id="rate">
+                <li><input type="radio" name="validation" value="1"></li>
+                <li>Êtes-vous humains? Cochez à droite si oui.</li>
+                <li><input type="radio" name="validation" value="2"></li>
+            </ul>
+            <h2>Votre avis/suggestion</h2> <textarea name="text" rows="5" cols="100"></textarea>
             <button type="submit">Envoyer</button>
         </form>
+        <?php
+        // l'instruction ci dessous vérifie que $_POST est défini (que le formulaire a été envoyé)
+        if ($_POST == true) {
+            if ($_POST["validation"] == 1 || $_POST["email"] == "" || $_POST["text"] == "") {
+                echo("Un des paramêtres n'est pas correctement rempli");
+            } else {
+                echo("Votre avis a bien été envoyé "." ".$_POST["email"]);
+                file_put_contents("./ratings/".$_POST["email"].".txt", $_POST["text"]);
+            }
+        }
+        ?>
     </main>
     <footer>
         <ul>

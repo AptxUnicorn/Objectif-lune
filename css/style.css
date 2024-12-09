@@ -44,39 +44,39 @@ section {
     justify-content: space-between;
     align-items: center;
     transition: 0.5s;
-
-    h1 {
-        margin: 0;
-    }
-
-    h2 {
-        margin: 0;
-        font-size: larger;
-        font-weight: 900;
-    }
-
-    h3 {
-        margin: 0;
-        font-size: large;
-    }
-
-    p {
-        height: fit-content;
-        font-size: medium;
-        margin: 0;
-    }
-
-    img {
-        width: 90%;
-        height: auto;
-        object-fit: cover;
-        border-radius: 20px;
-    }
 }
  
+section h1 {
+    margin: 0;
+}
+
+section h2 {
+    margin: 0;
+    font-size: larger;
+    font-weight: 900;
+}
+
+section h3 {
+    margin: 0;
+    font-size: large;
+}
+
+section p {
+    height: fit-content;
+    font-size: medium;
+    margin: 0;
+}
+
+section img {
+    width: 90%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
 /* media query pour appliquer le style seulement sur les appareils pouvant hover */
 
-@media (any-hover: hover) {
+@media (any-hover : hover) {
     section:hover {
         transform: scale(0.95);
     }
@@ -93,71 +93,69 @@ header {
 
 nav {
     height: 100%;
+}
 
-    ul {
-        list-style-type: none;
-        display: flex;
-        height: 100%;
-        justify-content:space-evenly;
-        margin: 0;
-        padding: 0;
+nav ul {
+    list-style-type: none;
+    display: flex;
+    height: 100%;
+    justify-content:space-evenly;
+    margin: 0;
+    padding: 0;
+}
 
-        li {
-            width: 25%;
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+nav ul li {
+    width: 25%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-            a {
-                width: 100%;
-                height: 100%;
-                text-decoration: none;
-                color: black;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                background-color: white;
-                transition: 0.4s; /* transition donne le temps pour lequel le contenu dans le selecteur :hover met à s'appliquer inverse les couleurs pour indiquer au passage de la souris que les boutons sont des boutons */
-            }
+nav ul li a {
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    transition: 0.4s; /* transition donne le temps pour lequel le contenu dans le selecteur :hover met à s'appliquer inverse les couleurs pour indiquer au passage de la souris que les boutons sont des boutons */
+}
 
-            /* media query pour appliquer le style seulement sur les appareils pouvant hover */
-
-            @media (any-hover: hover) {
-                a:hover {
-                background-color: black;
-                color: white;
-                }
-            }
-        }
+@media(any-hover : hover) {
+    nav ul li a:hover {
+        background-color: black;
+        color: white;
     }
-    
 }
 
 /* footer / liens dans le footer */
 
 footer{
     height: 10%;
-    ul {
-        list-style-type: none;
-        display: flex;
-        height: 100%;
-        justify-content: space-around;
-        margin: 0;
-        padding: 0;
+}
 
-        li {
-            width: 30%; /* Pour éviter que le grossissement au survol ne déforme le footer*/
-            display: flex;
-            justify-content: center;
-            align-items: center;
+footer ul {
+    list-style-type: none;
+    display: flex;
+    height: 100%;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+}
 
-            a {
-                display: flex;
-                justify-content: center;
-            }
-        }
-    }
+footer ul li {
+    width: 30%; /* Pour éviter que le grossissement au survol ne déforme le footer*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer ul li a {
+    display: flex;
+    justify-content: center;
 }
 
 #github{
@@ -198,18 +196,18 @@ footer{
     justify-content: space-evenly;
     align-items: space-evenly;
     flex-flow: wrap-reverse;
+}
 
-    section {
-        width: 95%;
-        height: 95%;
+#terre section {
+    width: 95%;
+    height: 95%;
+}
 
-        img {
-            border-radius: 20px 20px 0px 0px; /* généré à partir de : https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Border-radius_generator */
-            width: 100%;
-            height: 40%;
-            justify-self: start;
-        }
-    }
+#terre section img {
+    border-radius: 20px 20px 0px 0px; /* généré à partir de : https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Border-radius_generator */
+    width: 100%;
+    height: 40%;
+    justify-self: start;
 }
 
 /* Style de la page des missions */
@@ -219,45 +217,42 @@ footer{
     justify-content: space-around;
     align-items: center;
     flex-flow: wrap column;
+}
 
-    section {
-        width: 30%;
-        height: 90%;
+#missions section {
+    width: 30%;
+    height: 90%;
+}
 
-        img {
-            border-radius: 20px 20px 0px 0px; /* généré à partir de : https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Border-radius_generator */
-            width: 100%;
-            height: 40%;
-            justify-self: start;
-        }
-
-    }
+#missions section img {
+    border-radius: 20px 20px 0px 0px; /* généré à partir de : https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Border-radius_generator */
+    width: 100%;
+    height: 40%;
+    justify-self: start;
 }
 
 /* Style de la page sur apollo 11 */
 
 #apollo {
-
     display: flex;
     justify-content: center;
     align-items: center;
+}
 
-    section {
-        width: 95%;
-        height: 95%;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
+#apollo section {
+    width: 95%;
+    height: 95%;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
 
-        p {
-            width: 30%;
-        }
+#apollo section p {
+    width: 30%;
+}
 
-        img {
-            width: 30%;
-            height: 45%;
-        }
-
-    }
+#apollo section img {
+    width: 30%;
+    height: 45%;
 }
 
 /* Styles de la page d'accueil */
@@ -265,25 +260,26 @@ footer{
 #accueil  {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     text-align: center;
-
-    video {
-        height: 70%;
-        width: 100%;
-        display: flex;
-    }
 }
 
 video {
     position: relative;
     object-fit: cover; /*object fit précise la facon dont l'élément doit remplir son conteneur (image étirée ou comblante) */
     width: 100%;
-    height: 100%;
+    height: 60%;
 }
 
 /* styles de la page de contact */
+
+#rate {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
 
 form {
     display: flex;
