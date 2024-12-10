@@ -15,29 +15,31 @@
 
 <body>
     <header>
+        <!-- Menu de navigation avec hover -->
         <nav>
             <ul>
                 <li><a href="index.html">Accueil</a></li>
-                <li><a href="terre.html">Contexte</a></li>
-                <li><a href="missions.html">Missions</a></li>
-                <li><a href="apollo.html">Apollo 11</a></li>
+                <li><a href="./html/terre.html">Contexte</a></li>
+                <li><a href="./html/missions.html">Missions</a></li>
+                <li><a href="./html/apollo.html">Apollo 11</a></li>
             </ul>
         </nav>
     </header>
     <main id="accueil">
         <!-- Video qui se joue automatiquement, (mauvaise qualité mais seulement 0.3M de données. (compressée à l'aide de handbreaker)) -->
         <video muted autoplay loop playsinline> <!-- la balise video à plusieurs attributs : muted (la video ne donne pas de son) autoplay (elle se lance directement) loop (elle fait une boucle) displaysinline (elle ne se met pas en plein écran sur téléphone) -->
-            <source alt="video de la lune" src="./src/videos/Neil Armstrong - First Moon Landing 1969(2).mp4">
+            <source alt="video de la lune" src="./src/videos/index_video.mp4">
         </video>
         <!-- Titres page d'accueil -->
         <h1>Bienvenue sur Objectif Lune</h1>
         <h2>Ici vous en apprendrez plus sur l'histoire de la course à l'espace et de la conquête lunaire.</h2>
     </main>
     <footer>
+        <!-- Menu du footer, accès au code via la page github, accès au formulaire de contact et à la page wiki -->
         <ul>
             <li><a href="https://fr.wikipedia.org/wiki/Course_%C3%A0_l%27espace" alt="lien vers la page wikipedia de la course à l'espace" class="footext">Wikipédia</a></li>
             <li><a href="./php/form.php" alt="lien vers une page d'avis" class="footext">Contact</a></li>
-            <li><a href="https://github.com/AptxUnicorn/Objectif-lune"><img src="./src/images/github-mark.svg" alt="logo github" id="github"></a></li>
+            <li><a href="https://github.com/AptxUnicorn/Objectif-lune"><img src="./src/images/logo_github.svg" alt="logo github" id="github"></a></li>
         </ul>
     </footer>
 </body>

@@ -18,6 +18,8 @@ body {
 }
 
 main {
+    display: flex;
+    align-items: center;
     height: 80%;
     width: 100%;
 }
@@ -82,7 +84,7 @@ section img {
     }
 }
 
-/* Menu de navigation / header */
+/* Menu de navigation / header ces propriétés sont les mêmes sur chaque pages */
 
 header {
     width: 100%;
@@ -131,7 +133,7 @@ nav ul li a {
     }
 }
 
-/* footer / liens dans le footer */
+/* footer / liens dans le footer / le footer est le même sur chaque page */
 
 footer{
     height: 10%;
@@ -158,19 +160,23 @@ footer ul li a {
     justify-content: center;
 }
 
+/* github est le le lien d'image cliquable qui s'aggrandit*/
+
 #github{
     width: 40%;
     height: auto;
     transition: 0.4s; /* transition donne le temps pour lequel le contenu dans le selecteur :hover met à s'appliquer */
 }
 
-/* media query pour appliquer le style seulement sur les appareils pouvant hover */
+/* media query pour appliquer le style seulement sur les appareils pouvant hover (pour ne pas casser sur téléphone) */
 
 @media (any-hover: hover) {
     #github:hover {
         transform: scale(1.5); /* transform: scale() permet de modifier la taille de l'élément (en restant sur le même centre) */
     }
 }
+
+/* footext est la classe qui s'applique aux textes du footer */
 
 .footext{
     text-decoration: none;
@@ -192,7 +198,6 @@ footer ul li a {
 /* Styles de la page "terre" */
 
 #terre {
-    display: flex;
     justify-content: space-evenly;
     align-items: space-evenly;
     flex-flow: wrap-reverse;
@@ -213,9 +218,7 @@ footer ul li a {
 /* Style de la page des missions */
 
 #missions {
-    display: flex;
     justify-content: space-around;
-    align-items: center;
     flex-flow: wrap column;
 }
 
@@ -234,9 +237,7 @@ footer ul li a {
 /* Style de la page sur apollo 11 */
 
 #apollo {
-    display: flex;
     justify-content: center;
-    align-items: center;
 }
 
 #apollo section {
@@ -258,10 +259,8 @@ footer ul li a {
 /* Styles de la page d'accueil */
 
 #accueil  {
-    display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: center;
     text-align: center;
 }
 
@@ -273,6 +272,8 @@ video {
 }
 
 /* styles de la page de contact */
+
+/* #rate est l'id de la liste à puce de la page du contact */
 
 #rate {
     list-style: none;
@@ -299,9 +300,10 @@ button {
     padding: 0;
 }
 
+/* Zone de texte du formulaire */
+
 #text {
     height: 100px;
-
     input {
         height: 80%;
     }

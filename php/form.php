@@ -17,6 +17,7 @@
 <body>
     <header>
         <nav>
+            <!-- Même menu de navigation mais avec des différences de chemins que sur les html -->
             <ul>
                 <li><a href="../index.html">Accueil</a></li>
                 <li><a href="../terre.html">Contexte</a></li>
@@ -38,18 +39,21 @@
             <button type="submit">Envoyer</button>
         </form>
         <?php
-        // l'instruction ci dessous vérifie que $_POST est défini (que le formulaire a été envoyé)
+        // l'instruction ci dessous vérifie que $_POST est défini (que le formulaire a été envoyé, et que $tous les paramètres sont remplis (correctement))
         if ($_POST == true) {
             if ($_POST["validation"] == 1 || $_POST["email"] == "" || $_POST["text"] == "") {
                 echo("Un des paramêtres n'est pas correctement rempli");
             } else {
                 echo("Votre avis a bien été envoyé "." ".$_POST["email"]);
                 file_put_contents("./ratings/".$_POST["email"].".txt", $_POST["text"]);
+                // echo sert de confirmation
+                // file_put_contents enregistre les données du formulaire dans le dossier ratings dans un fichier du nom du mail de la personne
             }
         }
         ?>
     </main>
     <footer>
+        <!-- Menu du footer, accès au code via la page github, accès au formulaire de contact et à la page wiki -->
         <ul>
             <li><a href="https://fr.wikipedia.org/wiki/Course_%C3%A0_l%27espace" alt="lien vers la page wikipedia de la course à l'espace" class="footext">Wikipédia</a></li>
             <li><a href="form.php" alt="lien vers une page d'avis" class="footext">Contact</a></li>
